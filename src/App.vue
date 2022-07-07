@@ -114,6 +114,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin: 0 10px
 }
 
 .profile-content-img {
@@ -155,5 +156,11 @@ nav a {
   text-decoration: none;
 }
 
+
+@media screen and (max-width: 1315px) {
+  .profile-content-text {
+    display: none;
+  }
+}
 
 </style>

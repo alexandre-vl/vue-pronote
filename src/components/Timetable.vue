@@ -17,8 +17,8 @@ export default {
 </script>
 
 <style scoped>
-.timetable {
-  width: 600px;
-  height: 100%;
-}
+  .timetable {
+    width: 600px;
+    height: 100%;
+  }
 </style>
