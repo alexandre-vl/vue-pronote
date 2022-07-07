@@ -22,6 +22,11 @@ const routes = [
     name: "timetable",
     component: () => import("../views/TimetableView.vue"),
   },
+  {
+    path: "/communication",
+    name: "communication",
+    component: () => import("../views/ComView.vue"),
+  },
 ];
 
 const router = createRouter({

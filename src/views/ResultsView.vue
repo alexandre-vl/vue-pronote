@@ -1,5 +1,22 @@
 <template>
-    <div className="about">
-        <h1>This is an about page</h1>
+    <div className="results">
+        <VueSpace />
     </div>
 </template>
+
+
+<script>
+import VueSpace from '@/components/VueSpace.vue'
+
+export default {
+    name: 'ResultsView',
+    components: {
+        VueSpace
+    }
+}
+
+</script>
+
+<style>
+
+</style>

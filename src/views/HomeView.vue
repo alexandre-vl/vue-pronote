@@ -17,12 +17,13 @@ export default {
     VueSpace
   }
 }
+
 </script>
 
 <style scoped>
 .home {
   display: flex;
   flex-direction: row;
-  
+  background-color: #17ab67;
 }
 </style>

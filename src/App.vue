@@ -15,7 +15,7 @@
         <router-link to="/timetable">
           <div className="navbar-item">Vie scolaire </div>
         </router-link>
-        <router-link to="/about">
+        <router-link to="/communication">
           <div className="navbar-item">Communication</div>
         </router-link>
         <router-link to="/about">
@@ -26,9 +26,9 @@
               <p className="profile-content-etab">LYCEE SIMONE VEIL</p>
               <p className="profile-content-name">Hugo MARQUIS</p>
             </div>
-            <div className="profile-content-svg-container"> 
-              <svg xmlns="http://www.w3.org/2000/svg"
-                className="profile-content-arrow" viewBox="0 0 20 20" fill="currentColor">
+            <div className="profile-content-svg-container">
+              <svg xmlns="http://www.w3.org/2000/svg" className="profile-content-arrow" viewBox="0 0 20 20"
+                fill="currentColor">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                   clip-rule="evenodd" />
@@ -42,8 +42,25 @@
 
     </div>
   </nav>
-  <router-view />
+
+  <div className="vuespace">
+    <div className="vuespace-container">
+      <router-view />
+    </div>
+  </div>
+
+
+<!--   <h1>current path is {{$route.path}}</h1> -->
+
 </template>
+
+<script>
+export default {
+  created() {
+    console.log(this.$route.path);  // path is /post
+  }
+};
+</script>
 
 <style>
 #app {
@@ -82,7 +99,6 @@ nav {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-
 }
 
 .navbar-container {
@@ -154,6 +170,18 @@ nav a {
   font-weight: bold;
   color: #2c3e50;
   text-decoration: none;
+}
+
+.vuespace {
+  width: 100%;
+  height: 100vh;
+  background-color: #17ab67;
+}
+
+.vuespace-container {
+  height: 100%;
+  background-color: #ffffff;
+  border-top-left-radius: 50px;
 }
 
 

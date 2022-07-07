@@ -1,5 +1,5 @@
 <template>
-    <div className="textbook">
+    <div className="communication">
         <VueSpace />
     </div>
 </template>
@@ -9,7 +9,7 @@
 import VueSpace from '@/components/VueSpace.vue'
 
 export default {
-    name: 'TextbookView',
+    name: 'ComView',
     components: {
         VueSpace
     }
@@ -18,5 +18,4 @@ export default {
 </script>
 
 <style>
-
 </style>
