@@ -1,7 +1,9 @@
 <template>
   <nav>
     <router-link to="/">
-      <div className="navbar-logo"><img className="img-logo" src="./assets/pronote-logo.png"></div>
+      <div className="navbar-logo">
+        <img className="img-logo" src="./assets/pronote-logo.png" />
+      </div>
     </router-link>
 
     <div className="navbar-container">
@@ -13,33 +15,38 @@
           <div className="navbar-item">Résultats</div>
         </router-link>
         <router-link to="/timetable">
-          <div className="navbar-item">Vie scolaire </div>
+          <div className="navbar-item">Vie scolaire</div>
         </router-link>
         <router-link to="/communication">
           <div className="navbar-item">Communication</div>
         </router-link>
         <router-link to="/about">
           <div className="profile-container">
-            <img className="profile-content-img"
-              src="https://images.pexels.com/photos/1288182/pexels-photo-1288182.jpeg">
+            <img
+              className="profile-content-img"
+              src="https://images.pexels.com/photos/1288182/pexels-photo-1288182.jpeg"
+            />
             <div className="profile-content-text">
               <p className="profile-content-etab">LYCEE SIMONE VEIL</p>
               <p className="profile-content-name">Hugo MARQUIS</p>
             </div>
             <div className="profile-content-svg-container">
-              <svg xmlns="http://www.w3.org/2000/svg" className="profile-content-arrow" viewBox="0 0 20 20"
-                fill="currentColor">
-                <path fill-rule="evenodd"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="profile-content-arrow"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd" />
+                  clip-rule="evenodd"
+                />
               </svg>
             </div>
-
           </div>
         </router-link>
       </div>
-
-
     </div>
   </nav>
 
@@ -49,16 +56,14 @@
     </div>
   </div>
 
-
-<!--   <h1>current path is {{$route.path}}</h1> -->
-
+  <!--   <h1>current path is {{$route.path}}</h1> -->
 </template>
 
 <script>
 export default {
   created() {
-    console.log(this.$route.path);  // path is /post
-  }
+    console.log(this.$route.path); // path is /post
+  },
 };
 </script>
 
@@ -82,7 +87,7 @@ body {
 }
 
 .img-logo {
-  width: 150px;
+  width: 120px;
 }
 
 nav {
@@ -110,7 +115,8 @@ nav {
   margin-left: 1rem;
 }
 
-.navbar-item, .navbar-logo {
+.navbar-item,
+.navbar-logo {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -130,7 +136,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0 10px
+  margin: 0 10px;
 }
 
 .profile-content-img {
@@ -184,11 +190,9 @@ nav a {
   border-top-left-radius: 50px;
 }
 
-
 @media screen and (max-width: 1315px) {
   .profile-content-text {
     display: none;
   }
 }
-
 </style>

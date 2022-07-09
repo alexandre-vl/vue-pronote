@@ -6,18 +6,16 @@
 </template>
 
 <script>
-
-import Timetable from '@/components/Timetable.vue'
-import VueSpace from '@/components/VueSpace.vue'
+import Timetable from "@/components/Timetable.vue";
+import VueSpace from "@/components/VueSpace.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
     Timetable,
-    VueSpace
-  }
-}
-
+    VueSpace,
+  },
+};
 </script>
 
 <style scoped>
