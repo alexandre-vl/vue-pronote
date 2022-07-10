@@ -48,14 +48,36 @@
             <p class="timetable-table-time-text">9h</p>
           </div>
           <div class="timetable-table-box table-two">
-            <div class="timetable-bar-colored"></div>
+            <div
+              class="timetable-bar-colored"
+              style="background-color: coral;"
+            ></div>
+            <div class="timetable-content">
+              <div class="timetable-content-subject">EPS</div>
+              <div class="timetable-content-subtext">
+                <p class="timetable-content-prof">Haby R.</p>
+                <p class="timetable-content-classroom">GYM</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="timetable-table">
           <div class="timetable-table-time">
             <p class="timetable-table-time-text">11h</p>
           </div>
-          <div class="timetable-table-box table-one"></div>
+          <div class="timetable-table-box table-one">
+            <div
+              class="timetable-bar-colored"
+              style="background-color: aqua;"
+            ></div>
+            <div class="timetable-content">
+              <div class="timetable-content-subject">FRANÇAIS</div>
+              <div class="timetable-content-subtext">
+                <p class="timetable-content-prof">Falcou F.</p>
+                <p class="timetable-content-classroom">B323</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="timetable-table">
           <div class="timetable-table-time">
@@ -67,25 +89,73 @@
           <div class="timetable-table-time">
             <p class="timetable-table-time-text">14h</p>
           </div>
-          <div class="timetable-table-box table-one"></div>
+          <div class="timetable-table-box table-one">
+            <div
+              class="timetable-bar-colored"
+              style="background-color: blueviolet;"
+            ></div>
+            <div class="timetable-content">
+              <div class="timetable-content-subject">MATHEMATIQUES</div>
+              <div class="timetable-content-subtext">
+                <p class="timetable-content-prof">Pourrier V.</p>
+                <p class="timetable-content-classroom">B211</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="timetable-table">
           <div class="timetable-table-time">
             <p class="timetable-table-time-text">15h</p>
           </div>
-          <div class="timetable-table-box table-two"></div>
+          <div class="timetable-table-box table-two">
+            <div
+              class="timetable-bar-colored"
+              style="background-color: chartreuse;"
+            ></div>
+            <div class="timetable-content">
+              <div class="timetable-content-subject">HISTOIRE-GEO</div>
+              <div class="timetable-content-subtext">
+                <p class="timetable-content-prof">Capolongo A.</p>
+                <p class="timetable-content-classroom">B319</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="timetable-table">
           <div class="timetable-table-time">
             <p class="timetable-table-time-text">17h</p>
           </div>
-          <div class="timetable-table-box table-one"></div>
+          <div class="timetable-table-box table-one">
+            <div
+              class="timetable-bar-colored"
+              style="background-color: grey;"
+            ></div>
+            <div class="timetable-content">
+              <div class="timetable-content-subject">PHYSIQUE-CHIMIE</div>
+              <div class="timetable-content-subtext">
+                <p class="timetable-content-prof">Ducos B.</p>
+                <p class="timetable-content-classroom">B215</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="timetable-table">
           <div class="timetable-table-time">
             <p class="timetable-table-time-text">18h</p>
           </div>
-          <div class="timetable-table-box table-one"></div>
+          <div class="timetable-table-box table-one">
+            <div
+              class="timetable-bar-colored"
+              style="background-color: darkkhaki;"
+            ></div>
+            <div class="timetable-content">
+              <div class="timetable-content-subject">TECHNOLOGIE</div>
+              <div class="timetable-content-subtext">
+                <p class="timetable-content-prof">Andres C.</p>
+                <p class="timetable-content-classroom">B320</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -154,6 +224,40 @@ export default {
   width: 100%;
   background-color: #fff;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.timetable-content {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 18px;
+}
+
+.timetable-content-subject {
+  font-weight: 600;
+  font-size: 15px;
+  color: #185c3c;
+}
+
+.timetable-content-subtext {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  color: #268a5b;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.timetable-content-prof {
+  letter-spacing: 0.6px;
+}
+
+.timetable-content-classroom {
+  letter-spacing: 0.6px;
 }
 
 .table-two {
@@ -164,7 +268,7 @@ export default {
 }
 
 .table-one {
-  height: 50px;
+  height: 60px;
 }
 
 .timetable-bar-colored {
