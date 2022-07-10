@@ -1,39 +1,39 @@
 <template>
   <nav>
     <router-link to="/">
-      <div className="navbar-logo">
-        <img className="img-logo" src="./assets/pronote-logo.png" />
+      <div class="navbar-logo">
+        <img class="img-logo" src="./assets/pronote-logo.png" />
       </div>
     </router-link>
 
-    <div className="navbar-container">
-      <div className="navbar-items">
+    <div class="navbar-container">
+      <div class="navbar-items">
         <router-link to="/textbook">
-          <div className="navbar-item">Cahier de textes</div>
+          <div class="navbar-item">Cahier de textes</div>
         </router-link>
         <router-link to="/results">
-          <div className="navbar-item">Résultats</div>
+          <div class="navbar-item">Résultats</div>
         </router-link>
         <router-link to="/timetable">
-          <div className="navbar-item">Vie scolaire</div>
+          <div class="navbar-item">Vie scolaire</div>
         </router-link>
         <router-link to="/communication">
-          <div className="navbar-item">Communication</div>
+          <div class="navbar-item">Communication</div>
         </router-link>
         <router-link to="/about">
-          <div className="profile-container">
+          <div class="profile-container">
             <img
-              className="profile-content-img"
+              class="profile-content-img"
               src="https://images.pexels.com/photos/1288182/pexels-photo-1288182.jpeg"
             />
-            <div className="profile-content-text">
-              <p className="profile-content-etab">LYCEE SIMONE VEIL</p>
-              <p className="profile-content-name">Hugo MARQUIS</p>
+            <div class="profile-content-text">
+              <p class="profile-content-etab">LYCEE SIMONE VEIL</p>
+              <p class="profile-content-name">Hugo MARQUIS</p>
             </div>
-            <div className="profile-content-svg-container">
+            <div class="profile-content-svg-container">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="profile-content-arrow"
+                class="profile-content-arrow"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -50,20 +50,22 @@
     </div>
   </nav>
 
-  <div className="vuespace">
-    <div className="vuespace-container">
-      <router-view />
+  <div class="container">
+    <Timetable />
+    <div class="vuespace">
+      <div class="vuespace-container">
+        <router-view />
+      </div>
     </div>
   </div>
 
-  <!--   <h1>current path is {{$route.path}}</h1> -->
 </template>
 
 <script>
+import Timetable from "@/components/Timetable";
+
 export default {
-  created() {
-    console.log(this.$route.path); // path is /post
-  },
+  components: {Timetable}
 };
 </script>
 
@@ -184,6 +186,7 @@ nav a {
 }
 
 .vuespace {
+  padding-top: 95px;
   width: 100%;
   height: 100vh;
   background-color: #17ab67;
@@ -193,6 +196,11 @@ nav a {
   height: 100%;
   background-color: #ffffff;
   border-top-left-radius: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
 }
 
 @media screen and (max-width: 1315px) {

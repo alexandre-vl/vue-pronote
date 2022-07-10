@@ -1,18 +1,14 @@
 <template>
-    <div className="textbook">
-        <VueSpace />
+    <div class="textbook">
+
     </div>
 </template>
 
 
 <script>
-import VueSpace from '@/components/VueSpace.vue'
 
 export default {
     name: 'TextbookView',
-    components: {
-        VueSpace
-    }
 }
 
 </script>
