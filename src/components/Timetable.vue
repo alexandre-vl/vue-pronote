@@ -1,37 +1,39 @@
 <template>
   <div class="timetable">
     <div class="timetable-container">
-      <div class="timetable-selection">
-        <div class="timelable-selection-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </div>
-        <div class="timelable-selection-date">
-          <p class="timelable-selection-date-text">Mercredi 17 Mai</p>
-        </div>
-        <div class="timelable-selection-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clip-rule="evenodd"
-            />
-          </svg>
+      <div class="timetable-selection-container">
+        <div class="timetable-selection">
+          <div class="timelable-selection-arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="timelable-selection-date">
+            <p class="timelable-selection-date-text">Mercredi 17 Mai</p>
+          </div>
+          <div class="timelable-selection-arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <div class="timetable-tables">
@@ -39,68 +41,56 @@
           <div class="timetable-table-time">
             <p class="timetable-table-time-text">8h</p>
           </div>
-          <div class="timetable-table-box table-none"></div>
+          <div class="timetable-table-box table-none table-one"></div>
         </div>
         <div class="timetable-table">
           <div class="timetable-table-time">
             <p class="timetable-table-time-text">9h</p>
           </div>
-          <div class="timetable-table-box"></div>
-        </div>
-        <div class="timetable-table">
-          <div class="timetable-table-time">
-            <p class="timetable-table-time-text">10h</p>
+          <div class="timetable-table-box table-two">
+            <div class="timetable-bar-colored"></div>
           </div>
-          <div class="timetable-table-box"></div>
         </div>
         <div class="timetable-table">
           <div class="timetable-table-time">
             <p class="timetable-table-time-text">11h</p>
           </div>
-          <div class="timetable-table-box"></div>
+          <div class="timetable-table-box table-one"></div>
         </div>
         <div class="timetable-table">
           <div class="timetable-table-time">
             <p class="timetable-table-time-text">12h</p>
           </div>
-          <div class="timetable-table-box"></div>
+          <div class="timetable-table-box table-two table-none"></div>
         </div>
         <div class="timetable-table">
           <div class="timetable-table-time">
-            <p class="timetable-table-time-text">13h</p>
+            <p class="timetable-table-time-text">14h</p>
           </div>
-          <div class="timetable-table-box"></div>
-        </div>
-        <div class="timetable-table">
-          <div class="timetable-table-time">
-            <p class="timetable-table-time-text">14h30</p>
-          </div>
-          <div class="timetable-table-box"></div>
+          <div class="timetable-table-box table-one"></div>
         </div>
         <div class="timetable-table">
           <div class="timetable-table-time">
             <p class="timetable-table-time-text">15h</p>
           </div>
-          <div class="timetable-table-box"></div>
-        </div>
-        <div class="timetable-table">
-          <div class="timetable-table-time">
-            <p class="timetable-table-time-text">16h</p>
-          </div>
-          <div class="timetable-table-box"></div>
+          <div class="timetable-table-box table-two"></div>
         </div>
         <div class="timetable-table">
           <div class="timetable-table-time">
             <p class="timetable-table-time-text">17h</p>
           </div>
-          <div class="timetable-table-box"></div>
+          <div class="timetable-table-box table-one"></div>
         </div>
         <div class="timetable-table">
           <div class="timetable-table-time">
             <p class="timetable-table-time-text">18h</p>
           </div>
-          <div class="timetable-table-box"></div>
+          <div class="timetable-table-box table-one"></div>
         </div>
+      </div>
+
+      <div class="button-edt-container">
+        <a href="#" class="button-edt">Voir l'emploi du temps complet</a>
       </div>
     </div>
   </div>
@@ -133,7 +123,8 @@ export default {
   justify-content: center;
   gap: 30px;
   padding-top: 0px;
-  padding-left: 30px;
+  padding-left: 67px;
+  padding-right: 30px;
 }
 
 .timelable-selection-arrow {
@@ -146,7 +137,6 @@ export default {
   color: #fff;
   text-align: center;
 }
-
 .timetable-tables {
   display: flex;
   flex-direction: column;
@@ -161,10 +151,27 @@ export default {
 }
 
 .timetable-table-box {
-  height: 50px;
   width: 100%;
   background-color: #fff;
   border-radius: 10px;
+}
+
+.table-two {
+  height: 100px;
+}
+.table-none {
+  background-color: #1f7c51;
+}
+
+.table-one {
+  height: 50px;
+}
+
+.timetable-bar-colored {
+  height: 100%;
+  width: 8px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .timetable-table-time {
@@ -181,7 +188,24 @@ export default {
   color: #1b7249;
 }
 
-.table-none {
-  background-color: #1b7249;
+.button-edt-container {
+  padding: 20px 30px;
+  padding-left: 67px;
+}
+
+.button-edt {
+  height: 100%;
+  padding: 12px 50px;
+  border-radius: 10px;
+  border: solid 1px transparent;
+  background-color: #e68b7f;
+  color: #fff;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1350px) {
+  .button-edt {
+    padding: 12px 20px;
+  }
 }
 </style>

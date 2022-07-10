@@ -86,6 +86,10 @@ body {
   background-color: #17ab67;
 }
 
+a {
+  text-decoration: none;
+}
+
 .img-logo {
   width: 120px;
 }
@@ -97,6 +101,7 @@ nav {
   width: 100%;
   padding: 15px;
   position: fixed;
+  background-color: #17ab67;
 }
 
 .navbar-items {
