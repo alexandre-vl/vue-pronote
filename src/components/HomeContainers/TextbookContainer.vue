@@ -35,6 +35,16 @@
             </div>
             <p class="textbook-view-container-homeworks-item-desc">Exo 11 et 12 p.125 du manuel</p>
           </div>
+          <div class="textbook-view-container-homeworks-item">
+            <div class="textbook-item-line"><div class="textbook-item-line-color"></div></div>
+            <div class="textbook-view-container-homeworks-item-title">
+              <label class="control control--checkbox">Mathématiques
+                <input type="checkbox"/>
+                <div class="control__indicator"></div>
+              </label>
+            </div>
+            <p class="textbook-view-container-homeworks-item-desc">Exo 11 et 12 p.125 du manuel</p>
+          </div>
         </div>
       </div>
       <div class="textbook-view-container-box">
