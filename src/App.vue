@@ -57,11 +57,11 @@
     <div class="vuespace" ref="myDiv">
       <div class="vuespace-container" id="slide-edt">
         <a href="#" v-on:click="change_slide_edt()" id="deploy">
-          <svg ref="true" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width: 30px; margin-left: 30px; margin-top: 30px">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          <svg ref="true" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" style="width: 35px; margin-left: 30px; margin-top: 30px">
+            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
           </svg>
-          <svg ref="false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display:none; width: 30px; margin-left: 30px; margin-top: 30px">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          <svg ref="false" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" style="display:none; width: 30px; margin-left: 30px; margin-top: 30px">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
           </svg>
         </a>
         <router-view />
@@ -94,7 +94,6 @@ export default {
         this.$refs.true.style.display = "none";
         this.$refs.container_edt.style.width = "0px";
         return this.deployed = false; }
-
     }
   }
 };
@@ -123,6 +122,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #2c3e50;
 }
 
 .img-logo {

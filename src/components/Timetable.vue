@@ -160,7 +160,9 @@
       </div>
 
       <div class="button-edt-container">
-        <a href="#" class="button-edt">Voir l'emploi du temps complet</a>
+        <router-link to="/timetable" class="button-edt">
+          Voir l'emploi du temps complet
+        </router-link>
       </div>
     </div>
   </div>
@@ -292,13 +294,17 @@ export default {
 }
 
 .button-edt-container {
-  padding: 20px 30px;
-  padding-left: 67px;
+  padding: 20px 30px 20px 76px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-edt {
   height: 100%;
-  padding: 12px 50px;
+  width: 100%;
+  padding: 12px 0;
   border-radius: 10px;
   border: solid 1px transparent;
   background-color: #e68b7f;
@@ -308,7 +314,7 @@ export default {
 
 @media screen and (max-width: 1350px) {
   .button-edt {
-    padding: 12px 20px;
+    padding: 12px 0px;
   }
 }
 </style>
