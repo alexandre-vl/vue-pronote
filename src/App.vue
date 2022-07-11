@@ -51,9 +51,19 @@
   </nav>
 
   <div class="container">
-    <Timetable />
-    <div class="vuespace">
-      <div class="vuespace-container">
+    <div class="timetable-base" ref="container_edt">
+      <Timetable />
+    </div>
+    <div class="vuespace" ref="myDiv">
+      <div class="vuespace-container" id="slide-edt">
+        <a href="#" v-on:click="change_slide_edt()" id="deploy">
+          <svg ref="true" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width: 30px; margin-left: 30px; margin-top: 30px">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          <svg ref="false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display:none; width: 30px; margin-left: 30px; margin-top: 30px">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
         <router-view />
       </div>
     </div>
@@ -65,8 +75,31 @@
 import Timetable from "@/components/Timetable";
 
 export default {
-  components: {Timetable}
+  components: {Timetable},
+  data() {
+    return {
+      deployed: true
+    }
+  },
+  methods: {
+    change_slide_edt: function () {
+      console.log(this.deployed, this.$refs.myDiv)
+      if (this.deployed === false){
+        this.deployed = true
+        this.$refs.true.style.display = "block"
+        this.$refs.container_edt.style.width = "600px";
+        return this.$refs.false.style.display = "none"
+      }else {
+        this.$refs.false.style.display = "block";
+        this.$refs.true.style.display = "none";
+        this.$refs.container_edt.style.width = "0px";
+        return this.deployed = false; }
+
+    }
+  }
 };
+
+
 </script>
 
 <style>
@@ -196,11 +229,20 @@ nav a {
   height: 100%;
   background-color: #ffffff;
   border-top-left-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .container {
   display: flex;
   flex-direction: row;
+}
+
+.timetable-base {
+  width: 600px;
+  transition: width 0.2s;
 }
 
 @media screen and (max-width: 1315px) {

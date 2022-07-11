@@ -1,5 +1,5 @@
 <template>
-  <div class="timetable">
+  <div class="timetable" >
     <div class="timetable-container">
       <div class="timetable-selection-container">
         <div class="timetable-selection">
@@ -178,7 +178,6 @@ export default {
 <style scoped>
 .timetable {
   padding-top: 95px;
-  width: 600px;
   height: 100vh;
   background-color: #17ab67;
 }
