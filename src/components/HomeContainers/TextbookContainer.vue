@@ -101,7 +101,7 @@ export default {
   background-color: #d8fad6;
   border-radius: 20px;
   padding: 30px 20px;
-  width: 340px;
+  width: 400px;
 }
 
 .textbook-view-container-title {

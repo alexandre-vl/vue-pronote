@@ -28,7 +28,7 @@ export default {
 }
 
 .home>* {
-  flex: 1 1 160px;
+  flex: 1 1 300px;
 }
 
 </style>
