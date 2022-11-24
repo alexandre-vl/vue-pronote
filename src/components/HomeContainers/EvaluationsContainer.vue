@@ -1,6 +1,6 @@
 <template>
-  <div class="evaluations-view-container">
-    <p class="evaluations-view-container-title">Dernières évaluations</p>
+  <div class="flex flex-col justify-center text-start gap-5 m-5 bg-secondary rounded-[20px] px-5 py-6 h-fit w-96">
+    <p class="font-semibold text-[20px] pl-2">Dernières évaluations</p>
     <div class="evaluations-view-container-content">
 
 

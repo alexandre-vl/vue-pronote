@@ -1,6 +1,6 @@
 <template>
-  <div class="textbook-view-container">
-    <p class="textbook-view-container-title">Travail à faire</p>
+  <div class="flex flex-col justify-center text-start gap-5 m-5 bg-secondary rounded-[20px] px-5 py-6 h-fit w-96">
+    <p class="font-semibold text-[20px] pl-2">Travail à faire</p>
     <div class="textbook-view-container-content">
 
       <div class="textbook-view-container-box">

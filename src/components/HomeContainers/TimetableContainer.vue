@@ -1,6 +1,6 @@
 <template>
-  <div class="timetable-view-container">
-    <p class="timetable-view-container-title">Agenda</p>
+  <div class="flex flex-col justify-center text-start gap-5 m-5 bg-secondary rounded-[20px] px-5 py-6 h-fit w-96">
+    <p class="font-semibold text-[20px] pl-2">Agenda</p>
     <div class="timetable-view-container-content">
 
 

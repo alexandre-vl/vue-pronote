@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="z-50">
     <router-link to="/">
       <div class="navbar-logo">
         <img class="img-logo" src="./assets/pronote-logo.png" />
@@ -23,12 +23,12 @@
         <router-link to="/about">
           <div class="profile-container">
             <img
-              class="profile-content-img"
-              src="https://images.pexels.com/photos/1288182/pexels-photo-1288182.jpeg"
+              class="w-12 h-12 object-cover rounded-full"
+              src="https://dailynorthwestern.com/wp-content/uploads/2019/01/ABROAD-DavidLee-WEB.jpg"
             />
-            <div class="profile-content-text">
-              <p class="profile-content-etab">LYCEE SIMONE VEIL</p>
-              <p class="profile-content-name">Hugo MARQUIS</p>
+            <div class="flex flex-col justify-start items-start">
+              <p class="text-sm font-semibold">LYCEE SIMONE VEIL</p>
+              <p class="font-medium text-base text-gray-100">Hugo MARQUIS</p>
             </div>
             <div class="profile-content-svg-container">
               <svg
@@ -50,21 +50,24 @@
     </div>
   </nav>
 
-  <div class="container">
-    <div class="timetable-base" ref="container_edt">
+  <div class="w-full bg-white flex">
+    <div class="fixed w-96 transition-all" v-bind:class = "(this.deployed)?'translate-x-0':'-translate-x-96'" ref="container_edt">
       <Timetable />
     </div>
-    <div class="vuespace" ref="myDiv">
-      <div class="vuespace-container" id="slide-edt">
-        <a href="#" v-on:click="change_slide_edt()" id="deploy">
-          <svg ref="true" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" style="width: 35px; margin-left: 30px; margin-top: 30px">
-            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-          </svg>
-          <svg ref="false" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" style="display:none; width: 30px; margin-left: 30px; margin-top: 30px">
-            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-          </svg>
-        </a>
-        <router-view />
+    <div class="pt-24 w-full bg-primary" ref="myDiv">
+      <div class="h-full rounded-tl-[50px] flex flex-col justify-start items-start bg-white transition-all" v-bind:class = "(this.deployed)?'ml-96':'ml-0'" id="slide-edt">
+        <div class="overflow-auto">
+          <a href="#" v-on:click="change_slide_edt()" id="deploy">
+            <svg ref="true" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor" style="width: 35px; margin-left: 30px; margin-top: 30px">
+              <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            <svg ref="false" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor" style="display:none; width: 30px; margin-left: 30px; margin-top: 30px">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <router-view />
+          <div class="h-10 bg-red-400 w-10"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -87,21 +90,22 @@ export default {
       if (this.deployed === false){
         this.deployed = true
         this.$refs.true.style.display = "block"
-        this.$refs.container_edt.style.width = "600px";
         return this.$refs.false.style.display = "none"
       }else {
-        this.$refs.false.style.display = "block";
         this.$refs.true.style.display = "none";
-        this.$refs.container_edt.style.width = "0px";
+        this.$refs.false.style.display = "block";
         return this.deployed = false; }
     }
   }
 };
 
-
 </script>
 
 <style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -116,9 +120,9 @@ export default {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #17ab67;
-}
+/* body {
+  overflow: hidden;
+} */
 
 a {
   text-decoration: none;
@@ -218,32 +222,6 @@ nav a {
   text-decoration: none;
 }
 
-.vuespace {
-  padding-top: 95px;
-  width: 100%;
-  height: 100vh;
-  background-color: #17ab67;
-}
-
-.vuespace-container {
-  height: 100%;
-  background-color: #ffffff;
-  border-top-left-radius: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
-.timetable-base {
-  width: 600px;
-  transition: width 0.2s;
-}
 
 @media screen and (max-width: 1315px) {
   .profile-content-text {
